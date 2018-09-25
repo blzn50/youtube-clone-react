@@ -4,7 +4,7 @@ import SearchBar from './search_bar';
 import VideoList from './video_list';
 import VideoDetail from './video_detail';
 
-const API = 'REACT_APP_YOUTUBE_API';
+const API = YOUTUBE_API;
 
 export default class App extends Component {
   constructor(props) {
