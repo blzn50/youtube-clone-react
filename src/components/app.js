@@ -11,19 +11,31 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      videos: []
+      videos: [],
+      selectedVideo: null
     };
 
     YTSearch({ key: API, term: 'dogs' }, data => {
       this.setState({
-        videos: data
+        videos: data,
+        selectedVideo: data[0]
       });
     });
   }
+
+  onSearch = term => {
+    console.log(term);
+    YTSearch({ key: API, term }, data => {
+      this.setState({
+        videos: data,
+        selectedVideo: data[0]
+      });
+    });
+  };
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearch={this.onSearch} />
         <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={this.state.videos} />
       </div>

@@ -1,0 +1,24 @@
+.search-bar > input {
+  margin: 1em auto;
+  position: relative;
+  width: 400px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.details {
+  border: 1px solid #666;
+  border-radius: 5px;
+  background: #eee;
+  padding: 1em;
+  margin: 0.5em 0;
+}
+
+.details > .title {
+  font-weight: 600;
+  line-height: 20px;
+}
+.details > .desc {
+  line-height: 20px;
+}
